@@ -1,0 +1,74 @@
+// grid system
+$grid-columns: 12;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+.container {
+  // width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr); /*cols x freespace*/
+  // grid-gap: 1rem;
+}
+
+/* Build Bootstrap's Grid */
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    grid-column: span ($i);
+  }
+}
+/* small */
+@media (min-width: $sm-breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      grid-column: span ($i) !important;
+    }
+  }
+  .container {
+    max-width: 560px;
+  }
+}
+/* medium */
+@media (min-width: $md-breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      grid-column: span ($i) !important;
+    }
+  }
+}
+/* large */
+@media (min-width: $lg-breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      grid-column: span ($i) !important;
+    }
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+/*extra large */
+@media (min-width: $xl-breakpoint) {
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      grid-column: span ($i) !important;
+    }
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1312px;
+  }
+}
