@@ -21,7 +21,6 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 // here css masry
@@ -31,4 +30,53 @@ a {
   align-items: center;
   justify-content: center;
   font-size: 5rem;
+}
+
+.Flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.125rem solid black;
+}
+
+h2 {
+  font-size: 2.188rem;
+}
+
+input {
+  padding: 0.5rem 4rem 0.5rem 0;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  outline: none;
+}
+
+input::placeholder{
+  padding-left: 0.313rem;
+}
+
+.dot {
+  color: blue;
+}
+
+.Collection {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 1.625rem 0;
+}
+  
+.list li {
+  padding-right: 0.625rem;
+  font-size: 15px;
+}
+
+.list li:hover {
+  color: blue;
+  cursor: pointer;
 }
